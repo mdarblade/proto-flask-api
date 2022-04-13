@@ -17,3 +17,6 @@ build: ## Build the container
 
 run: ## Run container on port configured in `config.env`
 	docker run -p 8080:8080 --rm $(APP_NAME) serve
+
+deploy: ## Deploy to sagemaker
+	@python scripts/deploy.py

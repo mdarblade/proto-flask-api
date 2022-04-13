@@ -16,9 +16,18 @@ Protifles are generated under the protopython folder and ruby folder
 ## How to run the flask api
 
 Flask api can be built and run with the following commands:
+
+To build the app:
 ```bash
 make build
 ```
+
+To run locally
 ```bash
 make run
+```
+
+To deploy to Sagemaker:
+```bash
+make deploy
 ```

@@ -55,7 +55,7 @@ def shape_filter(dataframe: pd.DataFrame, shapes: list) -> pd.DataFrame:
     return pd.DataFrame(gdf[shape_filter])
 
 
-@APP.route("/count-properties", methods=["GET", "POST"])
+@APP.route("/invocations", methods=["GET", "POST"])
 def get_request():
     # We use the proto object to read and write the responses
     query_parameters = query_pb2.QueryProperties()
