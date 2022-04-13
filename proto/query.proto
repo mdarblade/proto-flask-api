@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "proto/types.proto";
+
+
+// Query defines the gRPC querier service
+service Query {
+  rpc CountProperties(QueryProperties) returns (QueryCountResponse) {
+    
+  }
+  rpc ListProperties(QueryProperties) returns (QueryListResponse) {
+    
+  }
+  rpc ListPropertiesWithDetails(QueryProperties) returns (LongQueryListResponse) {
+    
+  }  
+}
+
+// QueryRawPricesRequest is the request type for the Query/RawPrices RPC method.
+message QueryProperties {
+  Shape Shape = 1;
+  Filters Filters=2;
+  PresetFilters PresetFilters=3;
+}
+
+// QueryRawPricesResponse is the response type for the Query/RawPrices RPC
+// method.
+message QueryCountResponse {
+  int64 PropertyCount = 1;
+}
+
+message QueryListResponse {
+  Properties Properties = 1;  
+  int64 PropertyCount = 2;
+}
+
+message LongQueryListResponse {
+  Properties Properties = 1;  
+  Detail Detail = 2;
+}

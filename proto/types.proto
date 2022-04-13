@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+/* SHAPES
+[
+  [
+    {
+      lat: 37.790124171795696,
+      lng: -122.42576747094726
+    },
+    {
+      lat: 37.777981852221075,
+      lng: -122.43271975671387
+    },
+    {
+      lat: 37.777981852221075,
+      lng: -122.43271975671387
+    }
+  ]
+]
+ * */
+
+message Point {
+    float latitude=1;
+    float longitude=2;
+}
+
+message Shape {
+    repeated Point point=1;
+}
+
+/* Filters
+ * */
+message Filter {
+    string Field=1;
+    string symbol=2; /* Can be either ['=', '<', '>', '!=', 'IN']  */
+
+    string value=3; /* Will be casted to the potential values of the column */
+}
+
+message Filters {
+    repeated Filter filter=1;
+}
+
+message PresetFilter {
+    int32 filterId=1;
+}
+
+message PresetFilters {
+    repeated PresetFilter filter=1;
+}
+
+/*
+ * Property ids */
+
+message PropertyId {
+    int64 propertyId=1;
+}
+
+message Properties {
+    repeated PropertyId property=1;
+}
+
+/*
+ * Property details */
+ message Detail {
+    string Beds=1;
+     
+}
