@@ -25,6 +25,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 ENV PATH="/opt/program:${PATH}"
 
 COPY * /opt/program/
+COPY protopython/proto/query_pb2.py /opt/program/protopython/proto/query_pb2.py
 
 COPY lib/* /opt/program/lib/
 ENV PYTHONPATH="/opt/program/"

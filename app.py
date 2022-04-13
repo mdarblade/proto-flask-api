@@ -1,4 +1,3 @@
-import httplib
 import pyarrow.parquet as pq
 import s3fs
 
@@ -42,7 +41,7 @@ def get_request():
     query_response = query_pb2.QueryCountResponse()
     query_response.count = 42
 
-    return query_response.SerializeToJson(), httplib.OK
+    return query_response.SerializeToJson()
 
 
 if __name__ == "__main__":
