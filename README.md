@@ -1,4 +1,4 @@
-# Marketing manager
+# Proto ruby python example
 
 This is an squeletton for the proto types between ruby and python.
 
